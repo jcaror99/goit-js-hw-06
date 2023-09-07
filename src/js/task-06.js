@@ -8,7 +8,9 @@ const inputLength = (e) => {
 
 	if (currentValue > defaultLength) {
 		textInput.classList.add('invalid');
-	} else if (currentValue > 0 && currentValue <= defaultLength) {
+	} else if (currentValue > 0 && currentValue < defaultLength) {
+		textInput.classList.add('invalid');
+	} else if (currentValue === defaultLength) {
 		textInput.classList.add('valid');
 	} else {
 		textInput.classList.add('#validation-input');
